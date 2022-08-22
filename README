@@ -40,9 +40,11 @@ like this in your .xinitrc:
     	sleep 1
     done &
     exec dwm
+====================================================================
 
+MY UPDATES!
 
-Configuration
--------------
-The configuration of dwm is done by creating a custom config.h
-and (re)compiling the source code.
+-added layout scroll using MOD+Shift+H/L
+-replaced old setlayout keybind MOD+Space with focusmaster
+-fakefullscreen installed
+-new keybind MOD+Shift+Space to keep window on top
