@@ -51,3 +51,6 @@ MY UPDATES!
 -grid layout added
 -Added alpha patch
 -Increased fontsize of bar && used new font..
+-ADDED NEW SCREENSHOT BINDS (scrot required) 
+	- MODKEY + Print = Fullscreen-shot
+	- Print = Selective screenshot (-s flag) 

@@ -70,6 +70,7 @@ static const Layout layouts[] = {
  screenshots
  */
 static const char *screenshot[] = {"scrot", "/home/ryang/pictures/screenshots/%Y-%m-%d-%T-screenshot.jpg",NULL};
+static const char *screenshotS[] = {"scrot", "-s", "/home/ryang/pictures/screenshots/%Y-%m-%d-%T-screenshot.jpg",NULL};
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
@@ -116,6 +117,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 	{ MODKEY,			XK_Print,  spawn, 	   {.v = screenshot} },
+	{0,				XK_Print,  spawn,	   {.v = screenshotS} },
 };
 
 /* button definitions */
