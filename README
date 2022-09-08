@@ -54,3 +54,4 @@ MY UPDATES!
 -ADDED NEW SCREENSHOT BINDS (scrot required) 
 	- MODKEY + Print = Fullscreen-shot
 	- Print = Selective screenshot (-s flag) 
+-Added mouse warping on focus stack + monitor switching
