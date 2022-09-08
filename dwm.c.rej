@@ -1,11 +1,24 @@
---- dwm.c
-+++ dwm.c
-@@ -234,6 +234,8 @@ static int xerror(Display *dpy, XErrorEvent *ee);
- static int xerrordummy(Display *dpy, XErrorEvent *ee);
- static int xerrorstart(Display *dpy, XErrorEvent *ee);
- static void zoom(const Arg *arg);
-+static void bstack(Monitor *m);
-+static void bstackhoriz(Monitor *m);
- 
- /* variables */
- static const char broken[] = "broken";
+--- dwm.c	2019-02-02 12:55:28.000000000 +0000
++++ dwm.c	2020-04-26 13:55:56.820584361 +0100
+@@ -93,6 +93,7 @@ struct Client {
+ 	int bw, oldbw;
+ 	unsigned int tags;
+ 	int isfixed, isfloating, isurgent, neverfocus, oldstate, isfullscreen;
++	char scratchkey;
+ 	Client *next;
+ 	Client *snext;
+ 	Monitor *mon;
+@@ -207,11 +209,13 @@ static void seturgent(Client *c, int urg
+ static void showhide(Client *c);
+ static void sigchld(int unused);
+ static void spawn(const Arg *arg);
++static void spawnscratch(const Arg *arg);
+ static void tag(const Arg *arg);
+ static void tagmon(const Arg *arg);
+ static void tile(Monitor *);
+ static void togglebar(const Arg *arg);
+ static void togglefloating(const Arg *arg);
++static void togglescratch(const Arg *arg);
+ static void toggletag(const Arg *arg);
+ static void toggleview(const Arg *arg);
+ static void unfocus(Client *c, int setfocus);

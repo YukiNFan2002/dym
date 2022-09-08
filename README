@@ -62,3 +62,4 @@ creating a new line for the opening curly bracket instead of
 seating it on the end of 'bstack(Monitor *m)'. You can check the diff
 file and split it with the actual file to see what was changed and 
 why it works...
+-Added named scratchpads patch
