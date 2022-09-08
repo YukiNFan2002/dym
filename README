@@ -55,3 +55,10 @@ MY UPDATES!
 	- MODKEY + Print = Fullscreen-shot
 	- Print = Selective screenshot (-s flag) 
 -Added mouse warping on focus stack + monitor switching
+-Added new layout! Bottom stack. This gave me some errors so I
+referenced similar functions and formatted them similarly
+e.g. changing the static void -> void at the top of the function and
+creating a new line for the opening curly bracket instead of 
+seating it on the end of 'bstack(Monitor *m)'. You can check the diff
+file and split it with the actual file to see what was changed and 
+why it works...
