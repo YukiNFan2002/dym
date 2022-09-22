@@ -63,3 +63,6 @@ seating it on the end of 'bstack(Monitor *m)'. You can check the diff
 file and split it with the actual file to see what was changed and 
 why it works...
 -Added named scratchpads patch
+-RETRACTED SCROT UPDATES .. .... Command was too big or something I
+probably just had to format/indent it properly that's something to 
+deal with some other time....

@@ -37,6 +37,7 @@ static const Rule rules[] = {
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1,        0  },
 	{ "firefox",  NULL,       NULL,       0,       	    0,           -1,        0  },
 	{ NULL,       NULL,   "scratchpad",   0,            1,           -1,       's' },
+	{ "realkeepassxc",NULL,   NULL,	    1 << 8,         0,           -1,        0  },
 };
 
 /* layout(s) */
@@ -72,8 +73,8 @@ static const Layout layouts[] = {
 /*
  screenshots
  */
-static const char *screenshot[] = {"scrot", "/home/ryang/pictures/screenshots/%Y-%m-%d-%T-screenshot.jpg",NULL};
-static const char *screenshotS[] = {"scrot", "-s", "/home/ryang/pictures/screenshots/%Y-%m-%d-%T-screenshot.jpg",NULL};
+static const char *screenshotA[] = {"scrot", "-a", "1920,0,1920,1080", "/home/ryang/pictures/screenshots/%Y-%m-%d-%T-screenshot.jpg",NULL};
+static const char *screenshotS[] = {"scrot", "-s", "-f", "/home/ryang/pictures/screenshots/%Y-%m-%d-%T-screenshot.jpg",NULL};
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
@@ -123,7 +124,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
-	{ MODKEY,			XK_Print,  spawn, 	   {.v = screenshot} },
+	{ MODKEY,			XK_Print,  spawn, 	   {.v = screenshotA} },
 	{0,				XK_Print,  spawn,	   {.v = screenshotS} },
 };
 
